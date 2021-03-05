@@ -1,0 +1,485 @@
+@charset "utf-8";
+
+.conBg{
+    background: url(../images/main/mainBanner.png) no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+}
+.conTit{
+    position: absolute;
+    width: 280px;
+    word-break: keep-all; /*음절로 단어 떨어트려줌*/
+}
+.conTit h2{
+    font-family: 'Montserrat';
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.conTit p{}
+
+
+/*mainSlider*/
+.mainSlider{
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+.mainSlider::after{
+    /*배경어둡게*/
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+}
+
+#mainVideo{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+
+.mainTxt{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -190px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Godo';
+    z-index: 1;
+}
+.mainTxt h3{font-size: 30px;}
+.mainTxt h2{
+    font-size: 50px;
+    margin: 20px 0;
+}
+.mainTxt h2 span{color: #fb0000;}
+
+.mainIcon{
+    display: inline-block;
+    margin-top: 30px;
+}
+.mainIcon li{
+    float: left;
+    margin: 0 25px;
+}
+.mainIcon li p{
+    margin-top: 20px;
+}
+
+.icon{
+    width: 160px;
+    height: 160px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    transition: background 0.5s; /*0.5초동안 바뀌게*/
+}
+.mainIcon li:hover .icon{
+    background: rgba(255,255,255,1);
+}
+
+.icon img{padding-top: 36px;}
+
+
+
+
+/*mainCon01*/
+.mainCon01{
+    background-image: url(../images/main/mainCon01Bg.png);
+    padding: 200px 0;
+}
+
+.con01L{
+    width: 517px;
+    height: 597px;
+    background: url(../images/main/con01Img01.png) no-repeat center center;
+    border-radius: 30px 0;
+    float: left;
+    /*background로 이미지를 넣었을때 transition속성값을 주는 방법*/
+    background-size: 100%;
+    transition: background-size 0.5s;
+}
+.con01L:hover{
+    background-size: 120%;
+}
+.con01L a{
+    color: #fff;
+    display: block;
+    height: 100%;
+}
+.con01L h2{
+    font-weight: 500;
+    font-size: 30px;
+    padding: 30px 0 0 20px;
+}
+.con01L h2 span{
+    display: block;
+    font-size: 20px;
+}
+
+.con01R{
+    float: right;
+    width: 610px;
+}
+
+
+.sliderBtn{}
+.sliderBtn li{
+    width: 25px;
+    height: 25px;
+    background: #bbb url(../images/main/con01ArrowL.png) no-repeat center center;
+    text-indent: -9999px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 100px;
+}
+.sliderBtn .nextBtn{
+    background-image: url(../images/main/con01ArrowR.png);
+}
+.sliderBtn li a{
+    display: block;
+}
+
+.pdList{}
+.pdList li{
+    float: left;
+    margin-left: 20px;
+    border-radius: 30px 0;
+    overflow: hidden;
+    position: relative;
+}
+.pdList li:first-child{
+    margin-left: 325px;
+    margin-bottom: 25px;
+}
+.pdList li a{}
+
+.pdList li img{ 
+    display: block;
+    transition: transform 0.5s;
+}
+.pdList li:hover img{
+    transform: scale(1.2); /*1.2배 확대*/
+}
+
+.pdList li p{
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+/*mainCon02*/
+.mainCon02{
+    background-image: url(../images/main/mainCon02Bg.png);
+}
+
+.mainCon02 .conTit, .mainCon04 .conTit, .mainCon05 .conTit, .location .conTit{
+    position: static;
+    margin-left: 0;
+    color: #fff;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
+}
+.mainCon02 .conTit h2{}
+.mainCon02 .conTit p{}
+
+.con02List{position: relative;}
+.con02List li{
+    width: 380px;
+    height: 500px;
+    background: #fff;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+    border-radius: 0 50px 0 0;
+    overflow: hidden;
+}
+.con02Img{overflow: hidden;} /*이미지를 감싸는 부모영역을 만들어서 그 부모 영역에 overflow: hidden를 줘야 이미지의 원래 사이즈에서 넘치지않고 확대됨*/
+.con02List li:last-child{margin-right: 0;}
+.con02List li img{
+    display: block;
+    transition: transform 0.5s;
+}
+.con02List li:hover img{
+    transform: scale(1.2);
+}
+.con05List li:hover img{
+    transform: scale(1); /*스케일값 기본으로 돌리기*/
+}
+
+.con02Info{
+    padding: 20px;
+    word-break: keep-all;
+}
+.con02Info h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.con02Info p{
+    color: #666;
+}
+.moreBtn{
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ee2e24;
+    border-radius: 30px;
+    background: url(../images/main/con02plusBtn.png) no-repeat 90% center;
+    
+    font-family: 'Godo';
+    font-size: 14px;
+    text-indent: 15px;
+    
+    position: absolute;
+    bottom: 20px;
+}
+.moreBtn a{
+    color: #ee2e24;
+    display: block;
+}
+
+.con02Arrow{
+    width: 48px;
+    height: 88px;
+    background: url(../images/main/con02ArrowL.png) no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -44px;
+}
+.con02Arrow a{
+    display: block;
+    height: 100%;
+}
+.con02ArrowL{
+    left: -80px;
+}
+.con02ArrowR{
+    background-image: url(../images/main/con02ArrowR.png);
+    right: -80px;
+}
+
+
+
+/*mainCon03*/
+.mainCon03{
+    background-image: url(../images/main/mainCon03Bg.png);
+}
+.mainCon03 img{display: block;}
+
+.mainCon03 .conTit{
+    margin-left: 0;
+}
+.mainCon03 .conTit h2{}
+.mainCon03 .conTit h2 span{font-family: 'Godo';}
+.mainCon03 .conTit p{}
+
+.snsList{margin-top: 50px;}
+.snsList li{
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    
+}
+.snsList li a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+.snsList li img{
+    display: block;
+}
+
+.youtube{
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.con03List{}
+.con03List li{
+    float: left;
+    margin-right: 20px;
+}
+.con03List li:last-child{margin-right: 0;}
+.con03List li a{}
+.con03List li img{}
+
+
+
+/*mainCon04*/
+.mainCon04{
+    background-image: url(../images/main/mainCon04Bg.png);
+}
+
+.mainCon04 .conTit{color: #333;}
+
+.con04List{
+    border-radius: 50px 0;
+    overflow: hidden; /*부모에 overflow: hidden;값을 주면 cf를 주지않아도됨*/
+}
+.con04List li{
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+
+.con04List li:last-child{
+    margin-right: 0;
+}
+
+.con04List li a{}
+.con04List li img{display: block;}
+
+.con04Tit{
+    position: absolute;
+    top: 111px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Godo';
+}
+.con04Tit img{
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.con04Tit h3{}
+
+
+
+/*mainCon05*/
+.mainCon05{
+    background-image: url(../images/main/mainCon05Bg.png);
+    padding-bottom: 0;
+}
+.mainCon05 .conTit{color: #333;}
+
+.con05List{}
+.con05List li{
+    height: 430px;
+}
+
+.con05Info{
+    margin: 20px;
+}
+.con05Info dl{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.con05Info dt{
+    display: inline-block;
+    font-weight: 900;
+    color: #f36c4d;
+}
+.con05Info dt::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background:  #aeaeae;
+    margin: 0 15px;
+}
+.con05Info dd{
+    display: inline-block;
+}
+
+.con05Info h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.con05Info p{}
+
+.con05News{
+    background: #f36c4d;
+    color: #fff;
+    margin-top: 180px;
+    padding: 5px 0;
+}
+.con05News a{color: #fff;}
+.con05News h3{
+    position: absolute;
+    font-size: 18px;
+}
+.con05News .inner{
+    position: relative;
+    height: 54px;
+    line-height: 54px;
+    
+}
+.News{padding: 0 100px;}
+.newsArrow{
+    position: absolute;
+}
+.newsArrow>div{margin: 10px 0;}
+.newsArrow>div a{}
+.newsArrow>div img{display: block;}
+
+.newsList{
+    padding-left: 40px;
+}
+.newsList li{
+}
+.newsList li a{
+    overflow: hidden;
+    display: block;
+}
+.newsList li p{
+    float: left;
+}
+.newsList li span{
+    float: right;
+    font-size: 14px;
+}
+
+.newsBtn{
+    width: 40px;
+    height: 40px;
+    background: #fff url(../images/main/plusBtn.png) no-repeat center center;
+    border-radius: 50%;
+    text-indent: -9999px;
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    transition: transform 2s;
+}
+.newsBtn:hover{
+    transform: rotate(360deg);
+}
+.newsBtn a{
+    display: block;
+    height: 100%;
+}
+
+/*지도추가 CSS*/
+.location .conTit{color: #333;}
+.location{padding: 100px 0;}
+.map{
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+.map iframe{
+    position: absolute;
+    top: 50%;
+    margin-top: -400px;
+}
